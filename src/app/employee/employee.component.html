@@ -1,0 +1,65 @@
+
+<body>
+  <h2>Save Employee</h2>
+<br>
+<br>
+
+<form (ngSubmit)="saveData()">
+
+Enter EmpId: <input type="text" [(ngModel)]="empData.empId" id ="empId" class = "empId" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter Name: <input type="text" [(ngModel)]="empData.empName" id ="empName" class = "empName" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter phone: <input type="text" [(ngModel)]="empData.empPhone" id ="empPhone" class = "empPhone" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter city: <input type="text" [(ngModel)]="empData.empCity" id ="empCity" class = "empCity" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter company: <input type="text" [(ngModel)]="empData.empCompany" id ="empCompany" class = "empCompany" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter salary: <input type="text" [(ngModel)]="empData.empSalary" id ="empSalary" class = "empSalary" [ngModelOptions]="{standalone:true}">
+<br><br>
+Enter Annual: <input type="text" [(ngModel)]="empData.empAnnual" id ="empAnnual" class = "empAnnual" [ngModelOptions]="{standalone:true}">
+<br><br>
+<input type="submit">
+</form>
+
+<h2>Delete Employee</h2>
+
+<br><br><br><br><br><br>
+<form (ngSubmit)="deleteData()">
+<input type="number" [(ngModel)]="id" [ngModelOptions]="{standalone:true}">
+<input type="submit">
+</form>
+<br><br><br><br><br><br>
+
+
+<h2>get Employee</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">EmpId</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">City</th>
+      <th scope="col">Company</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Annual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empData of data">
+     <td>{{empData.id}}</td>
+     <td>{{empData.empId}}</td>
+     <td>{{empData.empName}}</td>
+     <td>{{empData.empPhone}}</td>
+     <td>{{empData.empCity}}</td>
+     <td>{{empData.empCompany}}</td>
+     <td>{{empData.empSalary}}</td>
+     <td>{{empData.empAnnual}}</td>
+
+    </tr>
+  </tbody>
+</table>
+</body>
